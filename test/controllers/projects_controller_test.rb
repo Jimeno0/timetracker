@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TextInspectorControllerTest < ActionDispatch::IntegrationTest
+class ProjectsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
