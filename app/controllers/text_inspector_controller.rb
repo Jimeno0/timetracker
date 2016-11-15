@@ -1,0 +1,2 @@
+class TextInspectorController < ApplicationController
+end
