@@ -1,21 +1,23 @@
 <h1>Add a project</h1>
+<div class="row">
 
-<%= form_for @project do |f| %>
+<%= form_for @project, :html => {class: 'col s12'} do |f| %>
 
-      <div class="row">
-        <div class="input-field col s12">
-          <%= f.label :name %>
-          <%= f.text_field :name, class: 'validate' %>
-        </div>
-      </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'validate' %>
+    </div>
+  </div>
 
-      <div class="row">
-        <div class="input-field col s12">
-          <%= f.label :description %>
-          <%= f.text_field :description, class: 'validate' %>
-        </div>
-      </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'validate' %>
+    </div>
+  </div>
 
-  <%= f.button %>
+  <%= f.button "Send", class: 'waves-effect waves-light btn' %>
 <% end %>
+</div>
 

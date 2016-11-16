@@ -11,6 +11,8 @@ Project.create!(name: 'Recipes', description: 'Track my favorites recipes')
 
 i = 0
 10.times do
-  Project.create!(name: 'ironhack'+ i.to_s , description: 'ironhack is a ....')
+  p = Project.create!(name: 'ironhack'+ i.to_s , description: 'ironhack is a ....')
+  p.time_entries.create!(hours: rand(0...15), minutes: rand(0...2))
+
   i+=1
 end
