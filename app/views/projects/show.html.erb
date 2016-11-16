@@ -1,5 +1,12 @@
 <h1><%= @project.name %></h1>
-<a href="/projects">home</a>
+<ul>
+  <li>
+    <a href="/projects">home</a>
+  </li>
+  <li>
+    <a href="/projects/new">new</a>
+  </li>
+</ul>
 <hr>
 <% if @project.description.present? %>
   <span><%= @project.description %></span>
