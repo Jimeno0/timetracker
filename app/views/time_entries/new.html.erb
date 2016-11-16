@@ -1,0 +1,37 @@
+<h1>Add new time entry</h1>
+<div class="row">
+
+<%= form_for [@project ,@entry], :html => {class: 'col s12'} do |f| %>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :hours %>
+      <%= f.text_field :hours, class: 'validate' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :minutes %>
+      <%= f.text_field :minutes, class: 'validate' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :date %>
+      <%= f.date_field :date, class: 'datepicker' %>
+    </div>
+  </div>
+
+  <%= f.button "Send", class: 'waves-effect waves-light btn' %>
+<% end %>
+</div>
+
+<script type="text/javascript">
+  $('.datepicker').pickadate({
+  selectMonths: true, // Creates a dropdown to control month
+  selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+</script>
+

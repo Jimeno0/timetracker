@@ -1,10 +1,10 @@
-<h1><%= @project.name %></h1>
+<h2><%= @project.name %></h2>
 <ul>
   <li>
     <a href="/projects">home</a>
   </li>
   <li>
-    <a href="/projects/new">new</a>
+    <a href="/projects/<%= @project.id %>/time_entries">entries</a>
   </li>
 </ul>
 <hr>
