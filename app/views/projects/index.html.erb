@@ -2,12 +2,9 @@
 <ul>
   <% @projects.each do |elem| %>
     <li>
-    <% if elem.description %>
-      <strong><%= elem.name %>: </strong>
-      <span><%= elem.description %></span>
-    <% else %>
-      <strong><%= elem.name %> </strong>
-    <% end %>
+      <a href="/projects/<%= elem.id %>">
+        <%= elem.name %>
+      </a>
     </li>
   <% end %>
 </ul>
