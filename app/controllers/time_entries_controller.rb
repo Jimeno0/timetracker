@@ -30,6 +30,12 @@ class TimeEntriesController < ApplicationController
     redirect_to '/projects/#{params[:project_id]}/time_entries'
   end
 
+  def destroy
+    @project = Project.find(params[:project_id])
+    @entry = @project.time_entries.find(params[:id]).destroy
+    redirect_to '/projects/#{params[:project_id]}/time_entries'
+  end
+
   private
   def entry_params
    params.require(:time_entry).permit(:hours, :minutes, :date)
