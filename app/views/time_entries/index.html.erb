@@ -1,10 +1,13 @@
 
 <h1>Time entries</h1>
 <h2><%= @project.name %></h2>
-<a href="/projects">home</a>
+
+<%= link_to "Home", "/projects", class: "btn btn-primary" %>
+<%= link_to "New", "/projects/1/time_entries/new", class: "btn btn-primary" %>
 
 <% @entries.each do |entry| %>
   <li>
     <%= entry.hours %> h <%= entry.minutes %> m - <%= entry.date %>
+    <%= link_to "Edit", "/projects/#{@project.id}/time_entries/#{entry.id}/edit" %>
   </li>
 <% end %>
